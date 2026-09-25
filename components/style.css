@@ -1,0 +1,76 @@
+/* BEM - BLOCK ELEMENT MODIFIER */
+/* SMACSS */
+
+html {
+    font-family: sans-serif;
+    margin: 40px;
+}
+
+/* PILL IS AN ATOM */
+.c-pill {
+    border-radius: 25px;
+    padding: 10px;
+    margin: 40px;
+    color: darkblue;
+    background-color: lightblue;
+
+    &.c-pill--secondary {
+        background-color: lightgray;
+        color: black;
+    }
+
+    &.c-pill--outline {
+        background-color: transparent;
+        border: 1px solid grey;
+    }
+}
+
+/* BLOCK IS A MOLECULE */
+.c-block {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.c-block--borderless {
+    border: 0;
+}
+
+.c-block.c-block--highlight {
+    border-color: red;
+
+    .c-block__section--standout {
+        background-color: lightpink;
+    }
+}
+
+/* SECTION IS A ATOM WITHIN BLOCK */
+.c-block__section {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+
+    &.c-block__section--standout {
+        background-color: #ccc;
+    }
+
+    &:last-child {
+        border-bottom: 0;
+    }
+}
+
+/* THESE ARE UTILITY CLASSES */
+.u-margin-top-large {
+    margin-top: 20px;
+}
+
+.u-margin-bottom-large {
+    margin-bottom: 20px;
+}
+
+.u-margin-all-large {
+    margin: 20px;
+}
+
+.u-margin-all-small {
+    margin: 10px;
+}
