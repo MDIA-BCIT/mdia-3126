@@ -1,0 +1,71 @@
+/* DRY */
+/* Don't */
+/* Repeat */
+/* Yourself */
+/* Should be self-evident. Don't...repeat yourself. */
+
+/* POLA */
+/* Principle */
+/* Of */
+/* Least */
+/* Astonishment */
+/* Things should behave in a way that is expected */
+/* There should be no hidden side effects */
+/* You wouldn't hit your left turn signal and then */
+/* make a right-hand turn */
+
+/* em typography is the size of the emdash – */
+/* rem = relative em (relative to font-size of <html> */
+/* em = em, relative to the size of the parent element */
+
+/* Reusable Elements */
+.c-block {
+    background: black;
+    color: white;
+    padding: 10px;
+    border: 1px solid red;
+
+    &.c-block--highlight {
+        background: lightpink;
+        border: red;
+    }
+}
+
+/* One-off styling */
+.body {
+    @media screen and (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+}
+.sidebar {
+    border: 2px solid orange;
+}
+
+.content-area {
+    /* Most elements in CSS are: 
+    block, inline, or inline-block
+    You need to apply flex or grid styling
+    to the parent element to make them behave
+    differently
+    */
+    border: 1px solid red;
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
+
+.footer {
+    border: 1px solid blue;
+
+    @media screen and (min-width: 1024px) {
+        background: lightblue;
+    }
+}
+
+/* UNIVERSAL/UTILITY CLASSES */
+.u-highlight {
+    background: lightpink;
+    border: red;
+}
