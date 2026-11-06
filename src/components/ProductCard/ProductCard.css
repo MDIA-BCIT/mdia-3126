@@ -1,0 +1,37 @@
+.product-card {
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.product-card__image {
+    height: 100px;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card__details {
+    padding: 10px;
+}
+
+.product-card__title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.product-card__price {
+    color: #333;
+    font-style: italic;
+
+    &.product-card__price--sale {
+        color: #f00;
+    }
+}
+
+.product-card__description {
+    margin-bottom: 15px;
+}
